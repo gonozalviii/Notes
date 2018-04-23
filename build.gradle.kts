@@ -5,10 +5,18 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
- plugins {
- 	application
- }
+plugins {
+    application
+}
 
- application {
- 	mainClassName = "com.oc.Main"
- }
+application {
+    mainClassName = "com.oc.Main"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("de.jensd:fontawesomefx:8.9")
+}

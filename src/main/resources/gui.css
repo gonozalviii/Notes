@@ -1,0 +1,7 @@
+.root {
+    -fx-base: dimgrey;
+}
+
+.note {
+    -fx-background-color: yellow;
+}
