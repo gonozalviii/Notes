@@ -18,6 +18,7 @@ public class Main extends Application {
 		primaryStage.setTitle("Notes App");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+		primaryStage.setMaximized(true);
         primaryStage.show();
     }
 }

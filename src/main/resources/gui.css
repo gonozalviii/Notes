@@ -1,7 +1,28 @@
-.root {
+.root{
     -fx-base: dimgrey;
+    -fx-accent: #00fa00;
+    -fx-focus-color: #00fa00;
+    -fx-faint-focus-color: #00fa0022;
 }
 
 .note {
-    -fx-background-color: yellow;
+    -fx-background-image: url("note.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: stretch;
+    -fx-effect: dropshadow(gaussian, black, 4, 0.1, 2, 2);
+    -fx-font-weight: bold;
+}
+
+.note .list-view, .list-cell, .scroll-bar, .text-field {
+    -fx-background-color: transparent;
+}
+
+.noteitem .text-field {
+    -fx-background-color: transparent;
+}
+
+.corkboard {
+    -fx-background-image: url("corkboard.jpg");
+    -fx-background-size: 800px;
+    -fx-background-repeat: repeat;
 }

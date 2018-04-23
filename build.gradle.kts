@@ -8,7 +8,6 @@ buildscript {
         classpath("de.dynamicfiles.projects.gradle.plugins:javafx-gradle-plugin:8.8.2")
     }
     repositories {
-        mavenLocal()
         mavenCentral()
     }
 }
@@ -30,10 +29,13 @@ dependencies {
     implementation("de.jensd:fontawesomefx:8.9")
 }
 
-tasks {
-    withType<Wrapper>{
-        gradleVersion = "4.6"
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClassName = "com.oc.Main"
 }
 
 configure<JavaFXGradlePluginExtension> {
@@ -41,10 +43,8 @@ configure<JavaFXGradlePluginExtension> {
     vendor = "OC"
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-}
-
-application {
-    mainClassName = "com.oc.Main"
+tasks {
+    withType<Wrapper>{
+        gradleVersion = "4.6"
+    }
 }
